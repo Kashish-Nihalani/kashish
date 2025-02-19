@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="school_student" model="ir.sequence">
+        <field name="name">Roll Number</field>
+        <field name="code">school.student.sequence</field>
+        <field name="prefix">STU</field>
+        <field name="padding">3</field>
+        <field name="number_increment">1</field>
+    </record>
+
+    <record id="school_faculty" model="ir.sequence">
+        <field name="name">Faculty ID</field>
+        <field name="code">school.faculty.sequence</field>
+        <field name="prefix">FAC</field>
+        <field name="padding">3</field>
+        <field name="number_increment">1</field>
+    </record>
+
+    <record id="school_student_admin" model="ir.sequence">
+        <field name="name">Admin ID</field>
+        <field name="code">school.admin.sequence</field>
+        <field name="prefix">ADM</field>
+        <field name="padding">3</field>
+        <field name="number_increment">1</field>
+    </record>
+</odoo>

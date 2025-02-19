@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_student,access_student,model_school_student,base.group_user,1,1,1,1
+access_faculty,access_faculty,model_school_faculty,base.group_user,1,1,1,1
+access_result,access_result,model_school_student_result,base.group_user,1,1,1,1
+access_admin,access_admin,model_school_admin,base.group_user,1,1,1,1
+access_std,access_std,model_std_model,base.group_user,1,1,1,1
+access_create_appointment,access_create_appointment,model_create_appointment,base.group_user,1,1,1,1
+access_student_result,access_student_result,school.model_student_result,base.group_user,1,0,0,0
