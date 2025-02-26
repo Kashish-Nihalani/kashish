@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_practice_tree" model="ir.ui.view">
+            <field name="name">practice.tree</field>
+            <field name="model">practice</field>
+            <field name="arch" type="xml">
+                <tree string="practice">
+                    <field name="roll"/>
+                    <field name="name"/>
+                    <field name="eng"/>
+                    <field name="math"/>
+                    <field name="sci"/>
+                    <!-- <field name="country_id"/> -->
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_practice_form" model="ir.ui.view">
+            <field name="name">practice.form</field>
+            <field name="model">practice</field>
+            <field name="arch" type="xml">
+                <form string="Student practice Form">
+                    <sheet>
+                        <group>
+                            <field name="roll"/>
+                            <field name="name"/>
+                            <field name="eng"/>
+                            <field name="math"/>
+                            <field name="sci"/>
+                            <!-- <field name="country_id"/> -->
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_practice" model="ir.actions.act_window">
+            <field name="name">practice</field>
+            <field name="res_model">practice</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_practice_tree"/>
+        </record>
+
+        <menuitem id="menu_practice" name="practice" parent="menu_school" action="action_practice"/>
+
+    </data>
+</odoo>

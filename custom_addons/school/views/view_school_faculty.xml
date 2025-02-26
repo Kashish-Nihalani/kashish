@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_school_faculty_form" model="ir.ui.view">
+        <field name="name">school.faculty.form</field>
+        <field name="model">school.faculty</field>
+        <field name="arch" type="xml">
+            <form string="Faculty">
+                <sheet>
+                    <group>
+                        <field name="f_id"/>
+                        <field name="name"/>
+                        <field name="doj"/>
+                        <field name="sub"/>
+                        <field name="f_std"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_school_faculty_kanban" model="ir.ui.view">
+        <field name="name">school.faculty.kanban</field>
+        <field name="model">school.faculty</field>
+        <field name="arch" type="xml">
+            <kanban editable="top">
+                <field name="f_id"/>
+                <field name="name"/>
+                <field name="doj"/>
+                <field name="sub"/>
+                <field name="f_std"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click" style="display: flex; align-items: center; padding: 10px; border: 1px solid #ddd; margin: 5px; border-radius: 4px; background-color: #fff;">
+                            <div class="o_kanban_details" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <strong style="font-size: 1.3em; color: #333;">
+                                            <field name="f_id" editable="true"/>
+                                        </strong>
+                                    </div>
+                                    <div class="col-4 text-end">
+                                        <span class="badge rounded-pill" style="font-size: 1em; color: #fff; background-color: #007bff;">
+                                            <t t-out="record.f_id.value"/>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div style="font-size: 1.2em; color: #666;">
+                                    <field name="name" editable="true"/>
+                                </div>
+                                <div style="font-size: 1.2em; color: #666;">
+                                    <field name="doj" editable="true"/>
+                                </div>
+                                <div style="font-size: 1.2em; color: #666;">
+                                    <field name="sub" editable="true"/>
+                                </div>
+                                <div style="font-size: 1.2em; color: #666;">
+                                    <field name="f_std" editable="true"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+    <record id="view_school_faculty_list" model="ir.ui.view">
+        <field name="name">school.faculty.list</field>
+        <field name="model">school.faculty</field>
+        <field name="arch" type="xml">
+            <tree string="Faculty">
+                <field name="f_id"/>
+                <field name="name"/>
+                <field name="doj"/>
+                <field name="sub"/>
+                <field name="f_std"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_school_faculty_kanban" model="ir.actions.act_window">
+    <field name="name">Faculty</field>
+    <field name="res_model">school.faculty</field>
+    <field name="view_mode">kanban,tree,form</field>
+    <field name="view_id" ref="view_school_faculty_list"/>
+</record>
+
+</odoo>

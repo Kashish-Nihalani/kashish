@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!-- Tree View -->
+        <record id="view_school_admin_tree" model="ir.ui.view">
+            <field name="name">school.admin.tree</field>
+            <field name="model">school.admin</field>
+            <field name="arch" type="xml">
+                <tree string="School Admin List">
+                    <field name="a_id"/>
+                    <field name="name"/>
+                    <field name="des"/>
+                    <field name="doj"/>
+                    <field name="gen"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_school_admin_form" model="ir.ui.view">
+            <field name="name">school.admin.form</field>
+            <field name="model">school.admin</field>
+            <field name="arch" type="xml">
+                <form string="School Admin Form">
+                    <header>
+                        <button name="%(school.create_appointment_wizard)d"
+                                string="Create Appointment"
+                                type="action"
+                                class="oe_highlight"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="a_id" readonly="1"/>
+                            <field name="name"/>
+                            <field name="doj"/>
+                            <field name="des"/>
+                            <field name="gen"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_school_admin" model="ir.actions.act_window">
+            <field name="name">Admins</field>
+            <field name="res_model">school.admin</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+
+</odoo>

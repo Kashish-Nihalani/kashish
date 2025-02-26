@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <menuitem id="menu_school" name="School Management System" groups="base.group_user"/>
+
+    <menuitem id="menu_school_admin" name="Admin" parent="menu_school" action="action_school_admin"/>
+    <menuitem id="menu_school_faculty" name="Faculty" parent="menu_school" action="action_school_faculty_kanban"/>
+    <menuitem id="menu_school_student" name="Students" parent="menu_school" action="action_school_student"/>
+    <menuitem id="menu_std_model" name="Standard" parent="menu_school" action="action_std_model" groups="group_admin"/>
+    <menuitem id="menu_result" name="Result" parent="menu_school" action="action_result_form"/>
+
+</odoo>

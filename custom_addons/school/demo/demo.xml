@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+        <record id="ad1" model="school.admin">
+            <field name="name">Admin1</field>
+            <field name="doj">12/11/2024</field>
+            <field name="des">Manager</field>
+            <field name="gen">female</field>
+        </record>
+
+        <record id="ad2" model="school.admin">
+            <field name="name">Admin2</field>
+            <field name="doj">01/06/2023</field>
+            <field name="des">Manager</field>
+            <field name="gen">male</field>
+        </record>
+
+        <record id="ad3" model="school.admin">
+            <field name="name">Admin3</field>
+            <field name="doj">05/09/2022</field>
+            <field name="des">Manager</field>
+            <field name="gen">female</field>
+        </record>
+    </data>
+</odoo>

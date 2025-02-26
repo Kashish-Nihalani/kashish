@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_student,access_student,model_school_student,school.group_student,1,1,1,0
+student_access_result,access_result,model_school_student_result,school.group_student,1,0,0,0
+
+access_faculty,access_faculty,model_school_faculty,school.group_faculty,1,1,1,1
+faculty_access_result,access_result,model_school_student_result,school.group_faculty,1,1,1,1
+faculty_access_std,access_std,model_std_model,school.group_faculty,1,1,1,1
+
+access_result,access_result,model_school_student_result,school.group_admin,1,1,1,1
+access_admin,access_admin,model_school_admin,school.group_admin,1,1,1,1
+access_std,access_std,model_std_model,school.group_admin,1,1,1,1
+access_create_appointment,access_create_appointment,model_create_appointment,school.group_admin,1,1,1,1
